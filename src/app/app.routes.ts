@@ -1,3 +1,46 @@
 import { Routes } from '@angular/router';
+import { Login } from './pages/login/login';
+import { Layout } from './pages/layout/layout';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { EmployeeList } from './pages/employee-list/employee-list';
+import { EmployeeForm } from './pages/employee-form/employee-form';
+import { ProjectAssignment } from './pages/project-assignment/project-assignment';
+import { Projects } from './pages/projects/projects';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: Login
+  },
+  {
+    path: 'admin',
+    component: Layout,
+    children: [
+      {
+        path: 'dashboard',
+        component: Dashboard
+      },
+      {
+        path: 'employee-list',
+        component: EmployeeList
+      },
+      {
+        path: 'employee-form',
+        component: EmployeeForm
+      },
+      {
+        path: 'projects',
+        component: Projects
+      },
+      {
+        path: 'project-assignment',
+        component: ProjectAssignment
+      }
+    ]
+  }
+];
