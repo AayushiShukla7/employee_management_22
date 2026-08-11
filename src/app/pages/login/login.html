@@ -1,1 +1,50 @@
-<p>login works!</p>
+<div class="login-page">
+  <div class="login-card shadow-sm">
+    <div class="login-card-body">
+      <div class="text-center mb-4">
+        <div class="brand-badge">
+          EM
+        </div>
+        <h1 class="login-title">Welcome back</h1>
+        <p class="login-subtitle">
+          Sign in to manage employees, approvals, and team details.
+        </p>
+      </div>
+
+      <form class="login-form">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control form-control-lg" placeholder="Enter your username" id="username" name="username" [(ngModel)]="loginObject.userName">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Enter your password" [(ngModel)]="loginObject.password">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberCheck">
+            <label class="form-check-label" for="rememberCheck">
+              Remember me
+            </label>
+          </div>
+          <button type="button" class="btn btn-link forgot-btn">
+            Forgot password?
+          </button>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-100" (click)="onLogin()">
+          Sign In
+        </button>
+      </form>
+
+      <div class="mt-4 text-center">
+        <div class="dark-mode-chip">
+          <span></span>
+          Dark mode option available for the app theme.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

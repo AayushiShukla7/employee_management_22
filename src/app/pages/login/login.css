@@ -1,0 +1,128 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--background);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border-radius: 28px;
+  border: none;
+}
+
+.login-card-body {
+  padding: 2.25rem;
+}
+
+.brand-badge {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  border-radius: 18px;
+  background: var(--primary);
+  color: var(--surface);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-title {
+  color: var(--text);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: var(--muted);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.form-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.form-control {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  color: var(--text);
+  min-height: 3.3rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--cta);
+  box-shadow: 0 0 0 0.15rem rgba(37, 99, 235, 0.18);
+  background: var(--surface);
+}
+
+.form-check-input {
+  border-color: var(--primary);
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.form-check-label {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.forgot-btn {
+  color: var(--cta);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+}
+
+.forgot-btn:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: var(--cta);
+  border-color: var(--cta);
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+}
+
+.dark-mode-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface-soft);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.9rem 1.15rem;
+  font-size: 0.95rem;
+  justify-content: center;
+}
+
+.dark-mode-chip span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+}

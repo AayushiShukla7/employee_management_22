@@ -1,1 +1,60 @@
-<p>layout works!</p>
+<div class="app-shell" [ngClass]="isSidebarOpen ? '' : 'collapsed'">
+  <aside class="app-sidebar">
+    <div class="sidebar-top">
+      <div class="brand-badge">EM</div>
+      <div class="brand-text">
+        <p class="brand-name">Employee Management</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="nav-link active" href="#" data-short="🏠" title="Dashboard">
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a class="nav-link" href="#" data-short="👥" title="Employees">
+        <span class="nav-label">Employees</span>
+      </a>
+      <a class="nav-link" href="#" data-short="📁" title="Projects">
+        <span class="nav-label">Projects</span>
+      </a>
+      <a class="nav-link" href="#" data-short="📝" title="Assignments">
+        <span class="nav-label">Assignments</span>
+      </a>
+      <a class="nav-link" href="#" data-short="📊" title="Reports">
+        <span class="nav-label">Reports</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar" (click)="isSidebarOpen = !isSidebarOpen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="topbar-right">
+        <div class="user-info">
+          <div class="user-avatar">AR</div>
+          <div class="user-details">
+            <p class="user-name">Aayushi Roy</p>
+            <p class="user-role">HR Administrator</p>
+          </div>
+        </div>
+        <button class="logout-btn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="page-hero">
+        <h1>Welcome back</h1>
+        <p>Manage employee records, approvals, and team information from one place.</p>
+      </section>
+
+      <section class="page-body">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  </div>
+</div>
