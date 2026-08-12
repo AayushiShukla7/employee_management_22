@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { GlobalConstants } from '../../core/globalConstants/Global.Constant';
 
 @Component({
   selector: 'app-login',
@@ -29,6 +30,7 @@ export class Login {
       next: (response: any) => {
         if(response.result) {
           // alert("User logged in successfully");
+          localStorage.setItem(GlobalConstants.LOGIN_LOCAL_KEY, JSON.stringify(response.data));
           this.router.navigateByUrl("/admin/dashboard");
         }
         else {

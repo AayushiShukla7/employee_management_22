@@ -17,3 +17,23 @@
   --grey-color: #b5b5be;
   --dark-grey-color: #292932;
 }
+
+.dark-theme {
+  --background: #161513;
+  --surface: #211F1D;
+  --text: #F2F0ED;
+  --muted: #9CA3AF;
+  --primary: #D1D5DB;
+  --border: #3F3D3A;
+  --cta: #3B82F6;
+  --cta-hover: #60A5FA;
+  --surface-soft: #27251F;
+  --accent: #A78BFA;
+  --success: #4ADE80;
+  --error: #F87171;
+
+  --white-color: #17171e;
+  --background-color: #fafafb;
+  --grey-color: #45454e;
+  --dark-grey-color: #d6d6df;
+}
