@@ -5,22 +5,60 @@
       <div class="brand-text">
         <p class="brand-name">Employee Management</p>
       </div>
+
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar" (click)="isSidebarOpen = !isSidebarOpen">
+        <hugeicons-icon
+          [icon]="isSidebarOpen ? leftArrowicon : rightArrowicon"
+          [size]="24"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
+      </button>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="nav-link active" href="#" data-short="🏠" title="Dashboard">
+      <a class="nav-link active" routerLink="/admin/dashboard" title="Dashboard">
+        <hugeicons-icon
+          [icon]="dashboardIcon"
+          [size]="24"
+          color="#8b5cf6"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
         <span class="nav-label">Dashboard</span>
       </a>
-      <a class="nav-link" href="#" data-short="👥" title="Employees">
+      <a class="nav-link" routerLink="/admin/employee-list" title="Employees">
+        <hugeicons-icon
+          [icon]="employeeIcon"
+          [size]="24"
+          color="#8b5cf6"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
         <span class="nav-label">Employees</span>
       </a>
-      <a class="nav-link" href="#" data-short="📁" title="Projects">
+      <a class="nav-link" routerLink="/admin/projects" title="Projects">
+        <hugeicons-icon
+          [icon]="projectIcon"
+          [size]="24"
+          color="#8b5cf6"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
         <span class="nav-label">Projects</span>
       </a>
-      <a class="nav-link" href="#" data-short="📝" title="Assignments">
+      <a class="nav-link" routerLink="/admin/project-assignment" title="Assignments">
+        <hugeicons-icon
+          [icon]="assignmentIcon"
+          [size]="24"
+          color="#8b5cf6"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
         <span class="nav-label">Assignments</span>
       </a>
-      <a class="nav-link" href="#" data-short="📊" title="Reports">
+      <a class="nav-link" routerLink="/admin/reports" title="Reports">
+        <hugeicons-icon
+          [icon]="reportIcon"
+          [size]="24"
+          color="#8b5cf6"
+          [strokeWidth]="1.5"
+        ></hugeicons-icon>
         <span class="nav-label">Reports</span>
       </a>
     </nav>
@@ -28,17 +66,13 @@
 
   <div class="app-main">
     <header class="topbar">
-      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar" (click)="isSidebarOpen = !isSidebarOpen">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <div></div>
 
       <div class="topbar-right">
         <div class="user-info">
           <div class="user-avatar">AR</div>
           <div class="user-details">
-            <p class="user-name">Aayushi Roy</p>
+            <p class="user-name">Vedanshi Roy</p>
             <p class="user-role">HR Administrator</p>
           </div>
         </div>

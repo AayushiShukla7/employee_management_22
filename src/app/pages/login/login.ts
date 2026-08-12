@@ -28,7 +28,7 @@ export class Login {
     .subscribe({
       next: (response: any) => {
         if(response.result) {
-          alert("User logged in successfully");
+          // alert("User logged in successfully");
           this.router.navigateByUrl("/admin/dashboard");
         }
         else {
