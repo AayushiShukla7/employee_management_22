@@ -21,14 +21,16 @@
 </div>
 
 @if (isLoading()) {
-  <app-employee-list-skeleton />
+  <div class="my-3">
+    <app-employee-list-skeleton />
+  </div>
 }
 @else {
   <div class="table-container">
 
     <input type="text" placeholder="Search..." name="search-id" class="my-3 px-2 search-text" />
 
-    <p-table [value]="employees()" showGridlines sortField="deptId" [sortOrder]="-1" removableSort [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 20, 30]" [scrollable]="true" scrollHeight="400px">
+    <p-table [value]="employees()" showGridlines sortField="deptId" [sortOrder]="-1" removableSort [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="15" [rowsPerPageOptions]="[15, 30, 45]" [scrollable]="true" scrollHeight="400px">
         <ng-template #header>
             <tr>
                 <th pSortableColumn="id" pFrozenColumn>

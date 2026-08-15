@@ -1,5 +1,5 @@
 .skeleton-table {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -26,13 +26,13 @@
 }
 
 .skeleton-header {
-  background: #f9fafb;
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
 }
 
 .skeleton-row {
   min-height: 52px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border);
 
   &:last-child {
     border-bottom: none;
