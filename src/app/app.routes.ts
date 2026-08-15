@@ -30,7 +30,7 @@ export const routes: Routes = [
         component: EmployeeList
       },
       {
-        path: 'employee-form',
+        path: 'new-employee',
         component: EmployeeForm
       },
       {

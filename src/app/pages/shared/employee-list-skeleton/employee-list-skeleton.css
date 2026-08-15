@@ -1,0 +1,40 @@
+.skeleton-table {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skeleton-header,
+.skeleton-row {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    160px
+    130px
+    220px
+    140px
+    90px
+    160px
+    120px;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 14px 16px;
+}
+
+.skeleton-header {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.skeleton-row {
+  min-height: 52px;
+  border-bottom: 1px solid #e5e7eb;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

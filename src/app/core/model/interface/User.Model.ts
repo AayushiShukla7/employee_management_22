@@ -9,3 +9,4 @@ export interface IUser {
   role: string
   createdDate: string
 }
+

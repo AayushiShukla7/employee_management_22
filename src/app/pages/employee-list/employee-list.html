@@ -1,1 +1,16 @@
-<p>employee-list works!</p>
+<div class="row">
+  <div class="col-12">
+    <h2>Employee List</h2>
+  </div>
+</div>
+
+@if (isLoading()) {
+  <app-employee-list-skeleton />
+}
+@else {
+  <div class="table-container">
+    <table>
+      <!-- Existing table -->
+    </table>
+  </div>
+}

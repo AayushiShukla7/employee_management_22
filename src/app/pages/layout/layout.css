@@ -318,10 +318,10 @@ hugeicons-icon {
 }
 
 .page-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
+  display: inline-block;
+  min-height: 400px;
+  width: 100% !important;
+  padding: 1rem;
   background: var(--surface);
   border-radius: 28px;
   color: var(--muted);
@@ -356,9 +356,5 @@ hugeicons-icon {
     padding: 0.85rem 0.95rem;
     border-radius: 14px;
     font-size: 0.95rem;
-  }
-
-  .page-content {
-    padding: 1.25rem 1rem;
   }
 }
