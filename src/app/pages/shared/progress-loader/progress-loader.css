@@ -1,0 +1,28 @@
+.progress-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 2px solid var(--surface-soft);
+  border-top-color: var(--cta);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.progress-message {
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

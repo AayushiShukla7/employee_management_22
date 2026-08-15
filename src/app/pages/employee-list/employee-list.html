@@ -1,6 +1,22 @@
 <div class="row">
-  <div class="col-12">
+  <div class="col-6">
     <h2>Employee List</h2>
+  </div>
+
+  <div class="col-6">
+    <button
+    type="button"
+    class="btn btn-primary add-button"
+    [disabled]="isProcessing()"
+    (click)="addEmployee()">
+    @if(isProcessing()){
+      <app-progress-loader message="Adding employee..." />
+    }
+    @else {
+      <span>+</span>
+      Add New Employee
+    }
+    </button>
   </div>
 </div>
 
@@ -9,8 +25,68 @@
 }
 @else {
   <div class="table-container">
-    <table>
-      <!-- Existing table -->
-    </table>
+
+    <input type="text" placeholder="Search..." name="search-id" class="my-3 px-2 search-text" />
+
+    <p-table [value]="employees()" showGridlines sortField="deptId" [sortOrder]="-1" removableSort [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 20, 30]" [scrollable]="true" scrollHeight="400px">
+        <ng-template #header>
+            <tr>
+                <th pSortableColumn="id" pFrozenColumn>
+                  <div class="flex items-center m-1">
+                    ID
+                    <p-sort-icon field="id" />
+                  </div>
+                </th>
+                <th pSortableColumn="name">
+                  <div class="flex items-center m-1">
+                    Name
+                    <p-sort-icon field="name" />
+                  </div>
+                </th>
+                <th pSortableColumn="contactNo">
+                  <div class="flex items-center m-1">
+                    Contact No
+                    <p-sort-icon field="contactNo" />
+                  </div>
+                </th>
+                <th pSortableColumn="emailId">
+                  <div class="flex items-center m-1">
+                    Email ID
+                    <p-sort-icon field="emailId" />
+                  </div>
+                </th>
+                <th pSortableColumn="deptId">
+                  <div class="flex items-center m-1">
+                    Department ID
+                    <p-sort-icon field="deptId" />
+                  </div>
+                </th>
+                <th pSortableColumn="gender">
+                  <div class="flex items-center m-1">
+                    Gender
+                    <p-sort-icon field="gender" />
+                  </div>
+                </th>
+                <th pSortableColumn="role">
+                  <div class="flex items-center m-1">
+                    Role
+                    <p-sort-icon field="role" />
+                  </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template #body let-employee>
+            <tr>
+                <td class="font-medium p-1">{{ employee.employeeId }}</td>
+                <td class="font-medium p-1">{{ employee.employeeName }}</td>
+                <td class="font-medium p-1">{{ employee.contactNo }}</td>
+                <td class="font-medium p-1">{{ employee.emailId }}</td>
+                <td class="font-medium p-1">{{ employee.deptId }}</td>
+                <td class="font-medium p-1">{{ employee.gender | titlecase }}</td>
+                <td class="font-medium p-1">{{ employee.role }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
   </div>
 }

@@ -19,7 +19,10 @@
     "@angular/router": "^22.1.0",
     "@hugeicons/angular": "^1.0.10",
     "@hugeicons/core-free-icons": "^4.2.3",
+    "@primeuix/themes": "^3.0.0",
+    "angular-datatables": "^16.0.1",
     "bootstrap": "^5.3.8",
+    "primeng": "^22.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
